@@ -1,0 +1,18 @@
+.b-dllist{
+    li{
+        color: #737373;
+        $font-size: 13;
+        font-size: em($font-size);
+        font-weight: 300;
+        padding: em(11, $font-size) 0 em(11, $font-size) 80px;
+        background: url(../images/b64/documents-list.png) no-repeat left center;
+        list-style: none;
+        a{
+            color: currentColor;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

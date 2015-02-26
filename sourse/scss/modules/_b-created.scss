@@ -1,0 +1,23 @@
+.b-created{
+    $font-size: 13;
+    font-size: em($font-size);
+    color: #FFF;
+    text-align: center;
+    padding-top:em(20, $font-size);
+    &:before{
+        content:"";
+        display: inline-block;
+        width: 24px;
+        height: 21px;
+        background: url(../images/b64/heart.png) no-repeat;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+    a{
+        color: #E3000B;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

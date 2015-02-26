@@ -1,0 +1,27 @@
+.b-tbar{
+    padding: em(29) 0;
+    background: rgb(227,0,11);
+    background: linear-gradient(45deg, rgba(227,0,11,0) 0%,rgba(225,0,11,0) 2%,rgba(176,0,8,0) 64%,rgba(175,0,8,1) 65%,rgba(171,0,8,1) 70%,rgba(171,0,8,1) 99%,rgba(171,0,8,1) 100%), linear-gradient(135deg,  rgba(227,0,11,1) 0%,rgba(171,0,8,1) 100%);
+    &__title{
+        color: #FFF;
+        font-size: em(33);
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+    &__main{
+        display: inline-block;
+        $background-color: #75090e;
+        color: #ECCDCD;
+        $font-size: 13;
+        font-size: em($font-size);
+        background-color: #75090e;
+        border-radius: em(17, $font-size);
+        padding: em(7, $font-size) em(15, $font-size);
+        text-decoration: none;
+        transition: background-color .3s;
+        &:hover{
+            background-color: darken($background-color, 5);
+        }
+    }
+}

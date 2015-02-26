@@ -1,0 +1,43 @@
+.b-header{
+    padding: em(13) 0 em(13);
+    &__logo{
+        float: left;
+        padding: em(5) em(15) 0 0;
+        img{
+            display: block;
+        }
+        a{
+            display: inline-block;
+        }
+    }
+    &__right{
+        overflow: hidden;
+        position: relative;
+        padding: em(7) 28px em(7) 0;
+    }
+    &__lng{
+        position: absolute;
+        right: 0;
+        top: 0;
+        a{
+            display: block;
+            color: #7f7f7f;
+            $font-size: 11;
+            font-size: em($font-size);
+            text-align: center;
+            border:2px solid #ededed;
+            width: 24px;
+            line-height: 20px;
+            margin-bottom: em(3, $font-size);
+            text-decoration: none;
+            transition:border-color .3s, color .3s;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &:hover, &.current{
+                border-color:#e3000b;
+                color: #e3000b;
+            }
+        }
+    }
+}

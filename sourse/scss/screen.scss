@@ -1,0 +1,29 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500,700&subset=latin,cyrillic);
+
+@import "modules/base";
+@import "modules/reset";
+@import "modules/grid";
+@import "modules/pr";
+body{
+    min-width:1012px;
+    position: relative;
+}
+.container{
+    width: 980px;
+    margin: 0 auto;
+}
+.wrap{
+    overflow: hidden;
+    min-width: 1012px;
+}
+.align-right{
+    text-align: right;
+}
+@import "modules/b-header";
+@import "modules/b-footer";
+@import "modules/b-page";
+@import "modules/b-tbar";
+@import "modules/b-dllist";
+@import "modules/b-created";
+@import "modules/b-topnav";
+@import "modules/b-filter";
