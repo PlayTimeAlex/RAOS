@@ -1,0 +1,135 @@
+.b-main{
+    &__gray{
+        background-color: #f3f3f3;
+        overflow: hidden;
+        padding: 0 0 em(20);
+    }
+    &__title{
+        color: #000;
+        $font-size: 33;
+        font-size: em($font-size);
+        font-weight: 700;
+        text-transform: uppercase;
+        background: url(../images/b64/mainTitle.png) no-repeat left bottom;
+        padding: em(8, $font-size) 0;
+        margin-bottom: em(19, $font-size);
+    }
+    &__news{
+        position: relative;
+        z-index: 10;
+        background: url(../images/b64/news_top_bg.png) no-repeat center top;
+        background-size: 100% auto;
+        padding: em(40) 0 0;
+        &:before{
+            content:"";
+            display: block;
+            width: 100%;
+            height: 100px;
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__slider{
+        overflow: hidden;
+        position: relative;
+        &:after{
+            content:"";
+            display: block;
+            height: 79px;
+            width: 100%;
+            background: url(../images/b64/slider_bottom_bg.png) no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+        }
+        h2{
+            color: #FFF;
+            $font-size: 43;
+            font-size: em($font-size);
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height:1.2;
+            padding: em(12,$font-size) 0;
+        }
+        p{
+            color: #FFF;
+            $font-size: 14;
+            font-size: em($font-size);
+            padding: em(12, $font-size) 0;
+        }
+        .slides{
+            > li{
+                background-color: #610609;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50% 50%;
+                padding: em(90) 0 em(97);
+                display: none;
+                &:first-child{
+                    display: block;
+                }
+            }
+        }
+        .control{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: em(63);
+            z-index: 10;
+            .prev, .next{
+                display: block;
+                float: left;
+                cursor: pointer;
+                width: 0;
+                height: 0;
+                padding: 27px 27px 0 0;
+                background: url(../images/b64/left.png) no-repeat 50% 50% rgba(255, 255, 255, .6);
+                background-size: 6px 12px;
+                cursor: pointer;
+                border:0;
+                &:hover, &:active{
+                    background-color: rgba(255, 255, 255, 1);
+                }
+            }
+            .next{
+                background-image: url(../images/b64/right.png);
+            }
+        }
+    }
+    &__about{
+        padding-bottom: em(40);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .b-main{
+        &__title{
+            text-align: center;
+            background-position: center bottom;
+        }
+        &__slider{
+            text-align: center;
+            h2{
+                $font-size: 33;
+                font-size: em($font-size);
+                padding: em(12,$font-size) 0;
+            }
+            .control{
+                top: em(23);
+                z-index: 10;
+                .prev, .next{
+                    padding: 67px 67px 0 0;
+                    background-size: 18px 36px;
+                }
+            }
+        }
+        &__about{
+            text-align: center;
+        }
+    }
+}

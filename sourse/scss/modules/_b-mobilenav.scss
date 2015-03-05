@@ -1,0 +1,47 @@
+.b-mobilenav{
+    display: none;
+    width: 220px;
+    height: 100%;
+    background-color: #db0000;
+    position: fixed;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 100;
+    overflow:auto;
+    &.open{
+        display: block;
+    }
+    &__link{
+        display: block;
+        $font-size: 16;
+        font-size: em($font-size);
+        font-weight: 700;
+        padding: em(23, $font-size) em(37, $font-size);
+        color: #fff;
+        border-bottom:1px solid rgba(255,255,255,.2);
+        text-decoration: none;
+        text-transform: uppercase;
+        &.current{
+            background-color: #fff;
+            color: #000;
+        }
+    }
+    &__lng{
+        padding: em(39) em(31);
+        a{
+            display: inline-block;
+            $font-size: 16;
+            font-size: em($font-size);
+            border:2px solid rgba(255,255,255,0);
+            text-decoration: none;
+            color: #fff;
+            padding: 0 em(10, $font-size);
+            &.current{
+                border-color: rgba(255,255,255,.5);
+                color: rgba(255,255,255,.5);
+                cursor: default;
+            }
+        }
+    }
+}

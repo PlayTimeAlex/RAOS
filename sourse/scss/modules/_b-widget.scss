@@ -1,0 +1,27 @@
+.b-widget{
+    &_academic{
+        p{
+            color: #000;
+            $font-size: 14;
+            font-size: em($font-size);
+            padding: em(5, $font-size) 0;
+        }
+    }
+    padding-bottom: em(20);
+
+    &_text{
+        p{
+            padding-bottom: em(25);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .b-widget{
+        &_academic{
+            p{
+                text-align: center;
+            }
+        }
+    }
+}

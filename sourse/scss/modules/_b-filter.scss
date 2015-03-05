@@ -1,3 +1,20 @@
 .b-filter{
-
+    padding-bottom: em(30);
+    &__item{
+        display: inline-block;
+        padding-bottom: em(10);
+    }
+    &__link{
+        color: #000;
+        $font-size: 16;
+        font-size: em($font-size);
+        display: block;
+        padding: em(5, $font-size) em(19, $font-size);
+        &.current{
+            text-decoration: none;
+            border-radius: em(17, $font-size);
+            background-color: #f7f5f3;
+            cursor: default;
+        }
+    }
 }

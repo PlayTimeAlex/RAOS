@@ -3,7 +3,6 @@
     font-size: em($font-size);
     color: #FFF;
     text-align: center;
-    padding-top:em(20, $font-size);
     &:before{
         content:"";
         display: inline-block;

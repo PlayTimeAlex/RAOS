@@ -1,0 +1,32 @@
+.b-book{
+    box-sizing: border-box;
+    margin-top: em(64);
+    overflow: hidden;
+    padding-right: 7px;
+    &__content{
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    &__link{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding-bottom: 140%;
+        background-color: #ccc;
+        background-position: 50% 50%;
+        background-size: cover;
+        box-sizing: border-box;
+        box-shadow: 7px 7px 7px rgba(0,0,0,.3);
+        border:1px solid #bbbbbb;
+        border-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .b-book{
+        &__content{
+            width: 200px;
+        }
+    }
+}

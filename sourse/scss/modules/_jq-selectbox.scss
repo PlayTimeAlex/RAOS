@@ -1,0 +1,49 @@
+.jq-selectbox{
+    &__select{
+        display: block;
+        border:2px solid #fce6e7;
+        padding: em(5) em(32) em(5) em(20);
+        border-radius: em(18);
+        text-align: left;
+        cursor: default;
+        &-text{
+            $font-size: 13;
+            font-size: em($font-size);
+            color: #fff;
+
+        }
+    }
+    &__trigger{
+        display: block;
+        width: 0;
+        height: 0;
+        border-top:4px solid #fff;
+        border-left:3px solid transparent;
+        border-right:3px solid transparent;
+        position: absolute;
+        top: 50%;
+        margin-top: -2px;
+        right: em(15);
+    }
+    &__dropdown{
+        width: 100%;
+        border:2px solid #fce6e7;
+        border-top:0;
+        text-align: left;
+        background-color: rgba(255,255,255,.9);
+        padding: em(20) 0;
+        li{
+            $font-size: 13;
+            font-size: em($font-size);
+            color: #000;
+            padding: em(5, $font-size) em(20, $font-size);
+            font-weight: 700;
+            cursor: pointer;
+            transition: color .3s;
+            &:hover{
+                color: #e3000b;
+                background-color: #fff;
+            }
+        }
+    }
+}

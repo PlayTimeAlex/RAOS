@@ -1,0 +1,113 @@
+.b-article{
+    background-color: #fff;
+    &__title{
+        color: #000;
+        margin-top: 10px;
+        $font-size: 23;
+        font-size: em($font-size);
+        text-transform: uppercase;
+        padding-bottom: em(9, $font-size);
+    }
+    &__content{
+        padding: em(13) em(50);
+        p{
+            color: #000;
+            $font-size: 14;
+            font-size: em($font-size);
+            padding: em(13, $font-size) 0;
+        }
+    }
+    &__header{
+        padding: em(10) 0 0;
+        .tag{
+            display: inline-block;
+            $background-color: #E3000B;
+            background-color: $background-color;
+            border-radius: 4px;
+            color: #FFF;
+            font-weight: 700;
+            padding: em(1) em(8);
+            text-transform: uppercase;
+            margin-right: em(5);
+            text-decoration: none;
+            transition:background-color .3s;
+            &:last-child{
+                margin-right: 0;
+            }
+            &:hover{
+                background-color: darken($background-color, 10);
+            }
+        }
+        .date{
+            color: #838D8F;
+            $font-size: 13;
+            font-size: em($font-size);
+            padding:0 em(5, $font-size);
+
+        }
+    }
+    &__slider{
+        position: relative;
+        .flex-prev, .flex-next{
+            display: block;
+            position: absolute;
+            height: 100%;
+            top: 0;
+            background: url(../images/b64/left.png) no-repeat center center #e0e0e0;
+            width: em(50);
+            left: em(-50);
+        }
+        .flex-next{
+            left: auto;
+            right: em(-50);
+            background-image: url(../images/b64/right.png);
+        }
+        img{
+            display: block;
+            width: 100%;
+        }
+        .flex-direction-nav{
+            li{
+                width: 0;
+                height: 0;
+                list-style: none;
+            }
+        }
+    }
+    &__feature-img{
+        display: block;
+        width: 100%;
+    }
+    &__academic-photo{
+        display: block;
+        float: none;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 950px) {
+    .b-article{
+        &__slider{
+            position: relative;
+            .flex-prev, .flex-next{
+                display: block;
+                position: absolute;
+                height: 100%;
+                top: 0;
+                background: url(../images/b64/left.png) no-repeat center center #e0e0e0;
+                width: em(25);
+                left: em(-25);
+            }
+            .flex-next{
+                left: auto;
+                right: em(-25);
+                background-image: url(../images/b64/right.png);
+            }
+        }
+        &__content{
+            padding: em(13) em(25);
+        }
+    }
+
+}

@@ -1,0 +1,32 @@
+.b-works{
+    &__item{
+        padding-bottom: em(27);
+        margin-bottom: em(27);
+        border-bottom:1px solid #e5e5e5;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__title{
+        display: block;
+        color: #000;
+        $font-size: 15;
+        font-size: em($font-size);
+        font-weight: 700;
+        padding-bottom: em(10, $font-size);
+    }
+    &__img{
+        display: block;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .b-works{
+        &__img{
+            display: block;
+            width: 100%;
+            margin-bottom: em(20);
+        }
+    }
+}

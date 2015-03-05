@@ -1,5 +1,12 @@
 .b-header{
     padding: em(13) 0 em(13);
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    backface-visibility: hidden;
     &__logo{
         float: left;
         padding: em(5) em(15) 0 0;
@@ -38,6 +45,28 @@
                 border-color:#e3000b;
                 color: #e3000b;
             }
+        }
+    }
+
+    &__omm{
+        position: absolute;
+        height: 100%;
+        width: 65px;
+        right: 0;
+        top: 0;
+        background: url(../images/b64/open-menu.png) no-repeat 50% 50%;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 200;
+    }
+}
+
+@media (max-width: 992px) {
+    .b-header{
+        position: relative;
+        &__right{
+            position: static;
         }
     }
 }

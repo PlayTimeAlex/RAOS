@@ -15,14 +15,14 @@
         background-size: 100% 100%;
     }
     &__item{
-        padding: 0 0 0 em(80);
+        padding: 0 0 em(20) em(80);
         background: url(../images/b64/icon1.png) no-repeat 10px top;
-        min-height: em(60);
+        min-height: em(80);
         box-sizing: border-box;
         &.icon2{
             background-image: url(../images/b64/icon2.png);
         }
-        &.icon2{
+        &.icon3{
             background-image: url(../images/b64/icon3.png);
         }
         .title{
@@ -31,6 +31,7 @@
             font-size: em($font-size);
             font-weight: 700;
             display: block;
+
         }
         .text{
             color: #C2C2C2;
@@ -54,5 +55,9 @@
             }
 
         }
+    }
+    .tel{
+        color: #fff !important;
+        text-decoration: none;
     }
 }

@@ -24,4 +24,25 @@
             background-color: darken($background-color, 5);
         }
     }
+    &__item{
+        &:last-child{
+            text-align: right;
+        }
+    }
+    &__sort{
+        margin:0 em(13);
+    }
+}
+
+@media (max-width: 768px) {
+    .b-tbar{
+        padding: em(10) 0;
+        &__item{
+            padding: em(5) 0;
+            text-align: center;
+            &:last-child{
+                text-align: center;
+            }
+        }
+    }
 }

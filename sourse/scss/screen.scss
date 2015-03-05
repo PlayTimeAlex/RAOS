@@ -1,23 +1,117 @@
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500,700&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=latin,cyrillic);
 
 @import "modules/base";
 @import "modules/reset";
-@import "modules/grid";
+@import "modules/new_grid";
 @import "modules/pr";
-body{
-    min-width:1012px;
-    position: relative;
+@import "modules/jq-selectbox";
+@import "modules/animate";
+html{
+    height: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
 }
-.container{
-    width: 980px;
-    margin: 0 auto;
+body{
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 80px;
+    &.open-popup{
+        height: 100%;
+        overflow-x:hidden;
+        overflow-y:hidden;
+        -webkit-overflow-scrolling:touch;
+    }
+}
+img{
+    max-width: 100%;
 }
 .wrap{
     overflow: hidden;
-    min-width: 1012px;
+    width: 100%;
+    min-width: 320px;
+    transition: left .3s;
+    position: relative;
+    &.menu-open{
+        left: -220px;
+    }
+    .overlay{
+        content:"";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        top: 0;
+        left: 0;
+        z-index: 110;
+        background-color: rgba(255, 255, 255,.7);
+        display: none;
+    }
+    &.menu-open{
+        .overlay{
+            display: block;
+        }
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
 }
 .align-right{
-    text-align: right;
+     text-align: right;
+ }
+.align-center{
+    text-align: center;
+}
+.hide-desktop{
+    display: none;
+}
+.hide-phone{
+    display: block;
+}
+@media (max-width: 992px) {
+    .hide-desktop{
+         display: block;
+     }
+    .hide-tablet{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .hide-phone{
+        display: none;
+    }
+}
+.page_librari{
+    background-color: #e0e0e0;
+}
+
+.breakepoint_desctop, .breakepoint_tablet, .breakepoint_phone{
+    width: 100%;
+    height: 1px;
+    overflow: hidden;
+    display: none;
+}
+.breakepoint_desctop{
+    display: block;
+}
+@media (max-width: 992px) {
+    .breakepoint_tablet{
+        display: block;
+    }
+    .breakepoint_desctop, .breakepoint_phone{
+        display: none;
+    }
+    body{
+        padding-top: 0;
+    }
+}
+@media (max-width: 768px) {
+    .breakepoint_phone{
+        display: block;
+    }
+    .breakepoint_desctop, .breakepoint_tablet{
+        display: none;
+    }
 }
 @import "modules/b-header";
 @import "modules/b-footer";
@@ -27,3 +121,16 @@ body{
 @import "modules/b-created";
 @import "modules/b-topnav";
 @import "modules/b-filter";
+@import "modules/b-news";
+@import "modules/b-mobilenav";
+@import "modules/b-book";
+@import "modules/b-academic";
+@import "modules/b-widget";
+@import "modules/b-works";
+@import "modules/b-main";
+@import "modules/b-article";
+@import "modules/b-popup";
+@import "modules/b-modal";
+@import "modules/b-text";
+@import "modules/b-feature";
+@import "modules/b-partners";

@@ -1,3 +1,10 @@
 .b-page{
     padding: em(40) 0;
+    &_book{
+        padding: 0;
+    }
+    &__book-row{
+        background: url(../images/b64/book-bg.png);
+        background-size: 5px 100%;
+    }
 }

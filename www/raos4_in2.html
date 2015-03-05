@@ -3,33 +3,51 @@
     <head>
         <title>Index</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=1012">
-        <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
         <link rel="stylesheet" href="css/style.min.css" media="all"/>
         <script src="js/01_jquery-2.0.3.min.js"></script>
         <script src="js/all.min.js"></script>
         <!--[if lte IE 8 ]><script type="text/javascript">window.location.href="ie8min/index.html";</script><![endif]-->
     </head>
-    <body>
+    <body class="@@body_classmod">
+
+        <div class="b-mobilenav">
+            <a class="b-mobilenav__link" href="raos4_in3.html">АкадемиКи</a>
+            <a class="b-mobilenav__link" href="raos4_in7.html">Деятельность</a>
+            <a class="b-mobilenav__link current" href="">Рейтинг НР2К</a>
+            <a class="b-mobilenav__link" href="raos4_in.html">Библиотека</a>
+            <a class="b-mobilenav__link" href="raos4_in2.html">Новости</a>
+            <a class="b-mobilenav__link" href="raos4_in6.html">Документы</a>
+            <div class="b-mobilenav__lng">
+                <a class="current" href="#">En</a><a href="#">Ру</a>
+            </div>
+        </div>
         <div class="wrap">
-            <header class="b-header row">
+            <div class="overlay js-close-menu"></div>
+            <header class="b-header">
                 <div class="container">
-                    <div class="b-header__logo">
-                        <a href="/index.html"><img src="images/content/logo.png" alt="российская академия общественных связей" title="На главную"/></a>
-                    </div>
-                    <div class="b-header__right">
-                        <nav>
-                            <ul class="b-topnav">
-                                <li class="b-topnav__item"><a class="b-topnav__link current" href="">АкадемиКи</a></li>
-                                <li class="b-topnav__item"><a class="b-topnav__link" href="">Деятельность</a></li>
-                                <li class="b-topnav__item"><a class="b-topnav__link" href="">Рейтинг НР2К</a></li>
-                                <li class="b-topnav__item"><a class="b-topnav__link" href="">Библиотека</a></li>
-                                <li class="b-topnav__item"><a class="b-topnav__link" href="">Новости</a></li>
-                                <li class="b-topnav__item"><a class="b-topnav__link" href="">Документы</a></li>
-                            </ul>
-                        </nav>
-                        <div class="b-header__lng">
-                            <a href="#">En</a><a class="current" href="#">Ру</a>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="b-header__logo">
+                                <a href="/index.html"><img src="images/content/logo.png" alt="российская академия общественных связей" title="На главную"/></a>
+                            </div>
+                            <div class="b-header__right">
+                                <nav>
+                                    <ul class="b-topnav hide-tablet">
+                                        <li class="b-topnav__item"><a class="b-topnav__link current" href="raos4_in3.html">АкадемиКи</a></li>
+                                        <li class="b-topnav__item"><a class="b-topnav__link" href="raos4_in7.html">Деятельность</a></li>
+                                        <li class="b-topnav__item"><a class="b-topnav__link" href="">Рейтинг НР2К</a></li>
+                                        <li class="b-topnav__item"><a class="b-topnav__link" href="raos4_in.html">Библиотека</a></li>
+                                        <li class="b-topnav__item"><a class="b-topnav__link" href="raos4_in2.html">Новости</a></li>
+                                        <li class="b-topnav__item"><a class="b-topnav__link" href="raos4_in6.html">Документы</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="b-header__lng hide-tablet">
+                                    <a href="#">En</a><a class="current" href="#">Ру</a>
+                                </div>
+                                <button class="b-header__omm hide-desktop js-open-menu"></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -37,11 +55,11 @@
 <div class="b-tbar">
     <div class="container">
         <div class="row">
-            <div class="span6">
+            <div class="col-sm-6 b-tbar__item">
                 <h1 class="b-tbar__title">НОВОСТИ</h1>
             </div>
-            <div class="span6 align-right">
-                <a class="b-tbar__main" href="/index.html">Вернутся на главную</a>
+            <div class="col-sm-6 b-tbar__item">
+                <a class="b-tbar__main" href="/index.html">Вернуться на главную</a>
             </div>
         </div>
     </div>
@@ -49,37 +67,143 @@
 <div class="b-page">
     <div class="container">
         <ul class="b-filter">
-            <li class="b-filter__item"><a class="b-filter__link curernt" href="#">Все новости</a></li>
+            <li class="b-filter__item"><a class="b-filter__link current" href="#">Все новости</a></li>
             <li class="b-filter__item"><a class="b-filter__link" href="#">Интервью</a></li>
             <li class="b-filter__item"><a class="b-filter__link" href="#">Выступления и доклады</a></li>
             <li class="b-filter__item"><a class="b-filter__link" href="#">СМИ</a></li>
             <li class="b-filter__item"><a class="b-filter__link" href="#">Медиабанк</a></li>
         </ul>
+        <div class="row js-news">
+            <div class="col-md-3 col-sm-4 js-news__col">
+                <article class="b-news">
+    <a href="popup-content.html" class="b-news__image js-popup-content" data-next="popup-content.html" title="Заседание учебно-методического совета вузов России" style="background-image:url(images/content/news-prev.jpg);"></a>
+    <div class="b-news__content">
+        <div class="b-news__tags">
+            <!-- Тег может быть только один -->
+            <a href="#" class="tag">Обзор</a>
+        </div>
+        <h2 class="b-news__title"><a class="js-popup-content" href="popup-content.html" title="Заседание учебно-методического совета вузов России">Заседание учебно-методического совета вузов России</a></h2>
+        <div class="b-news__date">16 февраля 2015</div>
+    </div>
+</article>
+            </div>
+            <div class="col-md-3 col-sm-4 js-news__col">
+                <article class="b-news">
+    <a href="popup-content.html" class="b-news__image js-popup-content" data-next="popup-content.html" title="Заседание учебно-методического совета вузов России совета вузов России" style="background-image:url(images/content/news-prev.jpg);"></a>
+    <div class="b-news__content">
+        <div class="b-news__tags">
+            <!-- Тег может быть только один -->
+            <a href="#" class="tag">Обзор</a>
+        </div>
+        <h2 class="b-news__title"><a class="js-popup-content" href="popup-content.html" title="Заседание учебно-методического совета вузов России совета вузов России">Заседание учебно-методического совета вузов России совета вузов России</a></h2>
+        <div class="b-news__date">16 февраля 2015</div>
+    </div>
+</article>
+            </div>
+            <div class="col-md-3 col-sm-4 js-news__col">
+                <article class="b-news">
+    <a href="popup-content.html" class="b-news__image js-popup-content" data-next="popup-content.html" title="Заседание" style="background-image:url(images/content/news-prev.jpg);"></a>
+    <div class="b-news__content">
+        <div class="b-news__tags">
+            <!-- Тег может быть только один -->
+            <a href="#" class="tag">Обзор</a>
+        </div>
+        <h2 class="b-news__title"><a class="js-popup-content" href="popup-content.html" title="Заседание">Заседание</a></h2>
+        <div class="b-news__date">16 февраля 2015</div>
+    </div>
+</article>
+            </div>
+            <div class="col-md-3 col-sm-4 js-news__col">
+                <article class="b-news">
+    <a href="popup-content.html" class="b-news__image js-popup-content" data-next="popup-content.html" title="Заседание учебно-методического совета вузов России" style="background-image:url(images/content/news-prev.jpg);"></a>
+    <div class="b-news__content">
+        <div class="b-news__tags">
+            <!-- Тег может быть только один -->
+            <a href="#" class="tag">Обзор</a>
+        </div>
+        <h2 class="b-news__title"><a class="js-popup-content" href="popup-content.html" title="Заседание учебно-методического совета вузов России">Заседание учебно-методического совета вузов России</a></h2>
+        <div class="b-news__date">16 февраля 2015</div>
+    </div>
+</article>
+            </div>
+            <div class="col-md-3 col-sm-4 js-news__col">
+                <article class="b-news">
+    <a href="popup-content.html" class="b-news__image js-popup-content" data-next="popup-content.html" title="Заседание учебно-методического совета вузов России" style="background-image:url(images/content/news-prev.jpg);"></a>
+    <div class="b-news__content">
+        <div class="b-news__tags">
+            <!-- Тег может быть только один -->
+            <a href="#" class="tag">Обзор</a>
+        </div>
+        <h2 class="b-news__title"><a class="js-popup-content" href="popup-content.html" title="Заседание учебно-методического совета вузов России">Заседание учебно-методического совета вузов России</a></h2>
+        <div class="b-news__date">16 февраля 2015</div>
+    </div>
+</article>
+            </div>
+            <div class="col-md-3 col-sm-4 js-news__col">
+                <article class="b-news">
+    <a href="popup-content.html" class="b-news__image js-popup-content" data-next="popup-content.html" title="Заседание учебно-методического" style="background-image:url(images/content/news-prev.jpg);"></a>
+    <div class="b-news__content">
+        <div class="b-news__tags">
+            <!-- Тег может быть только один -->
+            <a href="#" class="tag">Обзор</a>
+        </div>
+        <h2 class="b-news__title"><a class="js-popup-content" href="popup-content.html" title="Заседание учебно-методического">Заседание учебно-методического</a></h2>
+        <div class="b-news__date">16 февраля 2015</div>
+    </div>
+</article>
+            </div>
+            <div class="col-md-3 col-sm-4 js-news__col">
+                <article class="b-news">
+    <a href="popup-content.html" class="b-news__image js-popup-content" data-next="popup-content.html" title="Заседание учебно-методического совета вузов России совета вузов России" style="background-image:url(images/content/news-prev.jpg);"></a>
+    <div class="b-news__content">
+        <div class="b-news__tags">
+            <!-- Тег может быть только один -->
+            <a href="#" class="tag">Обзор</a>
+        </div>
+        <h2 class="b-news__title"><a class="js-popup-content" href="popup-content.html" title="Заседание учебно-методического совета вузов России совета вузов России">Заседание учебно-методического совета вузов России совета вузов России</a></h2>
+        <div class="b-news__date">16 февраля 2015</div>
+    </div>
+</article>
+            </div>
+            <div class="col-md-3 col-sm-4 js-news__col">
+                <article class="b-news">
+    <a href="popup-content.html" class="b-news__image js-popup-content" data-next="popup-content.html" title="Заседание учебно-методического совета вузов России" style="background-image:url(images/content/news-prev.jpg);"></a>
+    <div class="b-news__content">
+        <div class="b-news__tags">
+            <!-- Тег может быть только один -->
+            <a href="#" class="tag">Обзор</a>
+        </div>
+        <h2 class="b-news__title"><a class="js-popup-content" href="popup-content.html" title="Заседание учебно-методического совета вузов России">Заседание учебно-методического совета вузов России</a></h2>
+        <div class="b-news__date">16 февраля 2015</div>
+    </div>
+</article>
+            </div>
+        </div>
     </div>
 </div>
             <footer class="b-footer">
                 <div class="container">
                     <div class="row">
-                        <div class="span4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="b-footer__item">
                                 <span class="title">Президент Академий</span>
                                 <span class="text">Расницын Виталий<br />Георгиевич</span>
                             </div>
                         </div>
-                        <div class="span4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="b-footer__item icon2">
-                                <span class="title">Тел: 7 (499) 967-0548</span>
-                                <span class="title">Моб: 7 (985) 769-3149</span>
+                                <span class="title">Тел: <a class="tel" href="tel://7-499-967-0548">7 (499) 967-0548</a></span>
+                                <span class="title">Моб: <a class="tel" href="tel://7-985-769-3149">7 (985) 769-3149</a></span>
                             </div>
                         </div>
-                        <div class="span4">
+                        <div class="col-md-4 col-sm-12">
                             <div class="b-footer__item icon3">
                                 <a class="email" href="mailto:vrpr@mail.ru">vrpr@mail.ru</a>
                             </div>
                         </div>
                     </div>
                     <div class="b-created">
-                        Создано с любовью в <a target="_blank" href="http://mymediapro.ru">MyMediaPro</a>
+                        <a target="_blank" href="http://mymediapro.ru">Создание сайта</a> MyMediaPro
                     </div>
                 </div>
             </footer>

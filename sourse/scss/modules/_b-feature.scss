@@ -1,0 +1,8 @@
+.b-feature{
+    visibility: hidden;
+}
+@media (max-width: 768px) {
+    .b-feature{
+        text-align: center;
+    }
+}
