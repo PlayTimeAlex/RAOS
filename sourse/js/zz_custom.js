@@ -66,6 +66,7 @@ var $jsWidth, $newsContainer, $wrap, $bMobilenav, $jsAcademicContainer, scrollba
                 url: url,
                 beforeSend: function(){
                     $('body').addClass('open-popup').css("paddingRight", scrollbarWidth);
+                    $('.b-header').css("paddingRight", scrollbarWidth);
                     $('.b-modal').addClass('loading').css('display', 'block').stop().animate({
                         opacity: 1
                     }, 300);
@@ -110,7 +111,11 @@ var $jsWidth, $newsContainer, $wrap, $bMobilenav, $jsAcademicContainer, scrollba
                 }
             });
         });
-
+        $('body').on('click', '.b-modal', function(e){
+            if( e.target !== this )
+                return;
+            popup_close();
+        });
         $('body').on('click', '.b-modal__close', function(){
             popup_close();
         });
@@ -120,6 +125,10 @@ var $jsWidth, $newsContainer, $wrap, $bMobilenav, $jsAcademicContainer, scrollba
         var $promoSlider = $('.b-main__slider').flexslider({
             controlNav: false,
             directionNav: false,
+            smoothHeight: true,
+            start: function(slider){
+                slider.css("backgroundImage","none");
+            }
         });
         $('.js-flex-prev').click(function(){
             $promoSlider.flexslider("prev");
@@ -183,6 +192,7 @@ function popup_close(){
         }, 100, function(){
             $(this).css('display', 'none');
             $('body').removeClass('open-popup').css("paddingRight", 0);
+            $('.b-header').css("paddingRight", 0);
             $content.css("opacity", 1).children('.loaded-content').html('');
             $(this).children('.b-modal__arrow').css('opacity', 0);
         });

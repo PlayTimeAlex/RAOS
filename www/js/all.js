@@ -1677,7 +1677,7 @@
                         slider.setProps();
                     }
                     else if (vertical) { //VERTICAL:
-                        slider.viewport.height(slider.h);
+                        slider.viewport.outerHeight(slider.h);
                         slider.setProps(slider.h, "setTotal");
                     } else {
                         // SMOOTH HEIGHT:
@@ -1690,7 +1690,7 @@
             smoothHeight: function (dur) {
                 if (!vertical || fade) {
                     var $obj = (fade) ? slider : slider.viewport;
-                    (dur) ? $obj.animate({"height": slider.slides.eq(slider.animatingTo).height()}, dur) : $obj.height(slider.slides.eq(slider.animatingTo).height());
+                    (dur) ? $obj.animate({"height": slider.slides.eq(slider.animatingTo).outerHeight()}, dur) : $obj.outerHeight(slider.slides.eq(slider.animatingTo).outerHeight());
                 }
             },
             sync: function (action) {
@@ -1809,7 +1809,7 @@
 
                 // SLIDE:
                 if (!fade) {
-                    var dimension = (vertical) ? slider.slides.filter(':first').height() : slider.computedW,
+                    var dimension = (vertical) ? slider.slides.filter(':first').outerHeight() : slider.computedW,
                         margin, slideString, calcNext;
 
                     // INFINITE LOOP / REVERSE:
@@ -2039,7 +2039,7 @@
                 maxItems = slider.vars.maxItems;
 
             slider.w = (slider.viewport === undefined) ? slider.width() : slider.viewport.width();
-            slider.h = slide.height();
+            slider.h = slide.outerHeight();
             slider.boxPadding = slide.outerWidth() - slide.width();
 
             // CAROUSEL:
@@ -3880,6 +3880,7 @@ var $jsWidth, $newsContainer, $wrap, $bMobilenav, $jsAcademicContainer, scrollba
                 url: url,
                 beforeSend: function(){
                     $('body').addClass('open-popup').css("paddingRight", scrollbarWidth);
+                    $('.b-header').css("paddingRight", scrollbarWidth);
                     $('.b-modal').addClass('loading').css('display', 'block').stop().animate({
                         opacity: 1
                     }, 300);
@@ -3924,7 +3925,11 @@ var $jsWidth, $newsContainer, $wrap, $bMobilenav, $jsAcademicContainer, scrollba
                 }
             });
         });
-
+        $('body').on('click', '.b-modal', function(e){
+            if( e.target !== this )
+                return;
+            popup_close();
+        });
         $('body').on('click', '.b-modal__close', function(){
             popup_close();
         });
@@ -3934,6 +3939,10 @@ var $jsWidth, $newsContainer, $wrap, $bMobilenav, $jsAcademicContainer, scrollba
         var $promoSlider = $('.b-main__slider').flexslider({
             controlNav: false,
             directionNav: false,
+            smoothHeight: true,
+            start: function(slider){
+                slider.css("backgroundImage","none");
+            }
         });
         $('.js-flex-prev').click(function(){
             $promoSlider.flexslider("prev");
@@ -3997,6 +4006,7 @@ function popup_close(){
         }, 100, function(){
             $(this).css('display', 'none');
             $('body').removeClass('open-popup').css("paddingRight", 0);
+            $('.b-header').css("paddingRight", 0);
             $content.css("opacity", 1).children('.loaded-content').html('');
             $(this).children('.b-modal__arrow').css('opacity', 0);
         });

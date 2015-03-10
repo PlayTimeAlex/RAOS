@@ -635,7 +635,7 @@ a:hover {
   border: 2px solid #fce6e7;
   border-top: 0;
   text-align: left;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #fff;
   padding: 2em 0; }
   .jq-selectbox__dropdown li {
     font-size: 1.3em;
@@ -646,7 +646,7 @@ a:hover {
     transition: color .3s; }
     .jq-selectbox__dropdown li:hover {
       color: #e3000b;
-      background-color: #fff; }
+      background-color: #efefef; }
 
 /*!
 Animate.css - http://daneden.me/animate
@@ -3280,8 +3280,9 @@ img {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 50;
-  backface-visibility: hidden; }
+  z-index: 110;
+  backface-visibility: hidden;
+  box-sizing: border-box; }
   .b-header__logo {
     float: left;
     padding: 0.5em 1.5em 0 0; }
@@ -3327,7 +3328,8 @@ img {
 
 @media (max-width: 992px) {
   .b-header {
-    position: relative; }
+    position: relative;
+    padding-right: 0 !important; }
     .b-header__right {
       position: static; } }
 
@@ -3599,8 +3601,7 @@ img {
     width: 200px; } }
 
 .b-academic {
-  padding-bottom: 6em;
-  visibility: hidden; }
+  padding-bottom: 6em; }
   .b-academic__image {
     display: block;
     margin: 0 auto; }
@@ -3687,7 +3688,10 @@ img {
     left: 0; }
 .b-main__slider {
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  min-height: 40em;
+  background: url(../images/loading.gif) no-repeat center center;
+  padding: 9em 0 9.7em; }
   .b-main__slider:after {
     content: "";
     display: block;
@@ -3717,8 +3721,6 @@ img {
     background-position: 50% 50%;
     padding: 9em 0 9.7em;
     display: none; }
-    .b-main__slider .slides > li:first-child {
-      display: block; }
   .b-main__slider .control {
     position: absolute;
     width: 100%;

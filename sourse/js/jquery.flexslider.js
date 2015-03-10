@@ -582,7 +582,7 @@
                         slider.setProps();
                     }
                     else if (vertical) { //VERTICAL:
-                        slider.viewport.height(slider.h);
+                        slider.viewport.outerHeight(slider.h);
                         slider.setProps(slider.h, "setTotal");
                     } else {
                         // SMOOTH HEIGHT:
@@ -595,7 +595,7 @@
             smoothHeight: function (dur) {
                 if (!vertical || fade) {
                     var $obj = (fade) ? slider : slider.viewport;
-                    (dur) ? $obj.animate({"height": slider.slides.eq(slider.animatingTo).height()}, dur) : $obj.height(slider.slides.eq(slider.animatingTo).height());
+                    (dur) ? $obj.animate({"height": slider.slides.eq(slider.animatingTo).outerHeight()}, dur) : $obj.outerHeight(slider.slides.eq(slider.animatingTo).outerHё1eight());
                 }
             },
             sync: function (action) {
@@ -714,7 +714,7 @@
 
                 // SLIDE:
                 if (!fade) {
-                    var dimension = (vertical) ? slider.slides.filter(':first').height() : slider.computedW,
+                    var dimension = (vertical) ? slider.slides.filter(':first').outerHeight() : slider.computedW,
                         margin, slideString, calcNext;
 
                     // INFINITE LOOP / REVERSE:
@@ -944,7 +944,7 @@
                 maxItems = slider.vars.maxItems;
 
             slider.w = (slider.viewport === undefined) ? slider.width() : slider.viewport.width();
-            slider.h = slide.height();
+            slider.h = slide.outerHeight();
             slider.boxPadding = slide.outerWidth() - slide.width();
 
             // CAROUSEL:
