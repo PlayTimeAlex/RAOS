@@ -119,6 +119,37 @@ var $jsWidth, $newsContainer, $wrap, $bMobilenav, $jsAcademicContainer, scrollba
         $('body').on('click', '.b-modal__close', function(){
             popup_close();
         });
+
+
+        //Переключение новостей
+        var $jsNewsCat = $('.js-news-cat');
+
+        $jsNewsCat.click(function(e){
+            e.preventDefault();
+            var $link = $(this);
+            $.ajax({
+                url: $link.attr('href'),
+                beforeSend: function () {
+                    $newsContainer.stop().animate({
+                        opacity: 0
+                    }, 200);
+                },
+                success: function (result) {
+                    setTimeout(function(){
+                        $jsNewsCat.removeClass('current');
+                        $link.addClass('current');
+                        $newsContainer.html(result).stop().animate({
+                            opacity: 1
+                        }, 300);
+                    }, 210);
+                },
+                error: function () {
+                    $newsContainer.html('<div style="font-size:20px;">Пожалуйста обновите страницу</div>');
+                    alert('Ошибка загрузки');
+                }
+            });
+        });
+
     });
 
     $(window).load(function() {
@@ -162,11 +193,11 @@ function news_brakepoints(){
 
     if(width >= 992){
         $newsCols = $newsContainer.find('.js-news__col:nth-child(4n)');
-        $newsCols.after('<div class="pr-breakepoint" />');​​​​
-                return;
+        $newsCols.after('<div class="pr-breakepoint" />');
+        return;
     } else if(width >= 768){
         $newsCols = $newsContainer.find('.js-news__col:nth-child(3n)');
-        $newsCols.after('<div class="pr-breakepoint" />');​​​​
+        $newsCols.after('<div class="pr-breakepoint" />');
                 return;
     }
 }
@@ -176,9 +207,9 @@ function academicBreacepoints(){
         $tablet = $jsAcademicContainer.find('.js-academic_col:nth-child(3n)'),
         $desctop = $jsAcademicContainer.find('.js-academic_col:nth-child(4n)');
 
-    $phone.after('<div class="breakepoint_phone" />');​​​​
-    $tablet.after('<div class="breakepoint_tablet" />');​​​​
-    $desctop.after('<div class="b-book__contentreakepoint_desctop" />');​​​​
+    $phone.after('<div class="breakepoint_phone" />');
+    $tablet.after('<div class="breakepoint_tablet" />');
+    $desctop.after('<div class="b-book__contentreakepoint_desctop" />');
 
 }
 

@@ -22,6 +22,8 @@
         overflow: hidden;
         position: relative;
         padding: em(7) 28px em(7) 0;
+        box-sizing: border-box;
+        min-height:em(45); //for fix header on mobile
     }
     &__lng{
         position: absolute;
@@ -60,15 +62,5 @@
         background-color: transparent;
         cursor: pointer;
         z-index: 200;
-    }
-}
-
-@media (max-width: 992px) {
-    .b-header{
-        position: relative;
-        padding-right: 0!important;
-        &__right{
-            position: static;
-        }
     }
 }

@@ -55,4 +55,10 @@
         height: 1px;
         overflow: hidden;
     }
+
+    &-preloader{
+        text-align: center;
+        display: none;
+        padding: em(20) 0;
+    }
 }
