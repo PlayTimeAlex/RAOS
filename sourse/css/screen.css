@@ -3886,7 +3886,10 @@ img {
     padding: 2em 0;
     margin: 0 auto;
     box-sizing: border-box;
-    position: relative; }
+    position: relative;
+    height: 100vh;
+    background-clip: content-box;
+    background-color: #fff; }
   .b-modal__close {
     font-size: 10px;
     position: absolute;

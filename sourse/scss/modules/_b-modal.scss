@@ -18,6 +18,9 @@
         margin: 0 auto;
         box-sizing: border-box;
         position: relative;
+        height: 100vh;
+        background-clip: content-box;
+        background-color: #fff;
     }
     &__close{
         font-size: $base__font-size*1px;

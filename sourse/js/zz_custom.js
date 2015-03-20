@@ -58,7 +58,7 @@ var $jsWidth, $newsContainer, $wrap, $bMobilenav, $jsAcademicContainer, scrollba
         if($jsPopupContent.length){
             $('body').append('<div class="b-modal b-modal_hide"><div class="b-modal__cont" style="padding-right:'+scrollbarWidth+'px;"><div class="aconteiner"><a class="b-modal__arrow b-modal__arrow_prev" href=""></a><a class="b-modal__arrow b-modal__arrow_next" href=""></a></div></div><div class="b-modal__content"><div class="loaded-content"></div><button class="b-modal__close" title="Закрыть"></button></div></div>');
         }
-        $('.js-popup-content').click(function(e){
+        $('body').on('click', '.js-popup-content', function(e){
             e.preventDefault();
             var url = $(this).attr('href');
 
