@@ -4023,7 +4023,7 @@ function academicBreacepoints(){
 
     $phone.after('<div class="breakepoint_phone" />');
     $tablet.after('<div class="breakepoint_tablet" />');
-    $desctop.after('<div class="b-book__contentreakepoint_desctop" />');
+    $desctop.after('<div class="breakepoint_desctop" />');
 
 }
 
