@@ -3809,6 +3809,10 @@ img {
       color: #000;
       font-size: 1.4em;
       padding: 0.92857em 0; }
+    .b-article__content > ul li {
+      color: #000;
+      font-size: 1.4em;
+      padding: 0.14286em 0; }
   .b-article__header {
     padding: 1em 0 0; }
     .b-article__header .tag {
@@ -4007,6 +4011,14 @@ img {
     cursor: pointer; }
     .b-partners .flex-control-nav a.flex-active {
       background-color: #e3000b; }
+
+/*custom styles*/
+.b-article ul:not(.flex-direction-nav, .slides) {
+  font-size: 1.4em;
+  margin-left: 15px; }
+
+.b-page, .b-main__gray {
+  min-height: 602px; }
 
 .b-sale {
   background: url(../images/b-sale__bg.jpg) no-repeat center center #fe9643;

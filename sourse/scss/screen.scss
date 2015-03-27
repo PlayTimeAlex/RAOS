@@ -134,3 +134,13 @@ img{
 @import "modules/b-text";
 @import "modules/b-feature";
 @import "modules/b-partners";
+
+
+/*custom styles*/
+.b-article ul:not(.flex-direction-nav, .slides) {
+    font-size: 1.4em;
+    margin-left: 15px;
+}
+.b-page, .b-main__gray {
+    min-height: 602px;
+}
