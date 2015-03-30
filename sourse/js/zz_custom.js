@@ -178,6 +178,11 @@ var $jsWidth, $newsContainer, $wrap, $bMobilenav, $jsAcademicContainer, scrollba
             directionNav: false
         });
 
+        $('.b-text__slider').flexslider({
+            controlNav: false,
+            directionNav: false
+        });
+
         var wow = new WOW();
         wow.init();
 
