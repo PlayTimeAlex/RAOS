@@ -43,9 +43,26 @@
         .slides{
             li{
                 display: none;
-                > img{
+                .img{
                     display: block;
                     max-width: 100%;
+                    position: relative;
+                    z-index: 10;
+                    float: left;
+                    img{
+                        display: block;
+                    }
+                    &:before{
+                        content:"";
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: url(../images/b64/overlay.png);
+                        z-index: 20;
+                    }
                 }
             }
         }
@@ -58,7 +75,8 @@
             right: 0;
             max-width: 100%;
             padding: em(25) em(43);
-            max-height: em(130);
+            height: em(130);
+            z-index: 30;
             &:after{
                 content:"";
                 display: block;

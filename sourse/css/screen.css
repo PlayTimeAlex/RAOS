@@ -3989,9 +3989,24 @@ img {
   min-height: 21.2em; }
   .b-text__slider .slides li {
     display: none; }
-    .b-text__slider .slides li > img {
+    .b-text__slider .slides li .img {
       display: block;
-      max-width: 100%; }
+      max-width: 100%;
+      position: relative;
+      z-index: 10;
+      float: left; }
+      .b-text__slider .slides li .img img {
+        display: block; }
+      .b-text__slider .slides li .img:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/b64/overlay.png);
+        z-index: 20; }
   .b-text__slider .text {
     background-color: #044ea5;
     position: absolute;
@@ -4001,7 +4016,8 @@ img {
     right: 0;
     max-width: 100%;
     padding: 2.5em 4.3em;
-    max-height: 13em; }
+    height: 13em;
+    z-index: 30; }
     .b-text__slider .text:after {
       content: "";
       display: block;

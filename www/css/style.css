@@ -4000,9 +4000,24 @@ img {
   min-height: 21.2em; }
   .b-text__slider .slides li {
     display: none; }
-    .b-text__slider .slides li > img {
+    .b-text__slider .slides li .img {
       display: block;
-      max-width: 100%; }
+      max-width: 100%;
+      position: relative;
+      z-index: 10;
+      float: left; }
+      .b-text__slider .slides li .img img {
+        display: block; }
+      .b-text__slider .slides li .img:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3FpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoyYjA1ZjM3Mi1lMDUzLWE2NDMtOTAyYi04NmFjYzU4ZWE4MmQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RkI5MTQ3OTBEN0MzMTFFNEIyQUVENDE0MzdDODJENEQiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RkI5MTQ3OEZEN0MzMTFFNEIyQUVENDE0MzdDODJENEQiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOmY5ZjI1MTkwLTAyYzMtMDc0NC05YjQzLWNiMGVmN2VjYWM4NiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoyYjA1ZjM3Mi1lMDUzLWE2NDMtOTAyYi04NmFjYzU4ZWE4MmQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz49BBP5AAAAH0lEQVR42mL8//8/AwwwATEvELPABICS/xlBKgACDACXVwoMpbSm2wAAAABJRU5ErkJggg==);
+        z-index: 20; }
   .b-text__slider .text {
     background-color: #044ea5;
     position: absolute;
@@ -4012,7 +4027,8 @@ img {
     right: 0;
     max-width: 100%;
     padding: 2.5em 4.3em;
-    max-height: 13em; }
+    height: 13em;
+    z-index: 30; }
     .b-text__slider .text:after {
       content: "";
       display: block;
