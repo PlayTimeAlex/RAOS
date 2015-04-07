@@ -3337,6 +3337,9 @@ img {
     cursor: pointer;
     z-index: 200; }
 
+.menu-open .b-header {
+  left: -220px; }
+
 .b-footer {
   padding: 2em 0;
   position: relative;
