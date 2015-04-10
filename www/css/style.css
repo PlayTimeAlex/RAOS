@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&subset=latin,cyrillic);
 /*grid*/
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -613,6 +614,12 @@ a:hover {
   text-align: center;
   display: none;
   padding: 2em 0; }
+.pr-sponsor {
+  padding-bottom: 1.5em; }
+  .pr-sponsor h4 {
+    font-size: 2em;
+    font-weight: 700;
+    margin: 1em 0 0.5em; }
 
 .jq-selectbox__select {
   display: block;
@@ -3244,6 +3251,9 @@ img {
 .hide-phone {
   display: block; }
 
+.visible-phone {
+  display: none; }
+
 @media (max-width: 992px) {
   .hide-desktop {
     display: block; }
@@ -3252,7 +3262,9 @@ img {
 
 @media (max-width: 768px) {
   .hide-phone {
-    display: none; } }
+    display: none; }
+  .visible-phone {
+    display: block; } }
 
 .page_librari {
   background-color: #e0e0e0; }
@@ -4077,6 +4089,15 @@ img {
     text-decoration: underline; }
     .b-text__slider-list a:hover {
       text-decoration: none; }
+.b-text > ul {
+  padding: 0.5em 0; }
+  .b-text > ul li {
+    color: #000;
+    font-size: 1.4em;
+    list-style: none;
+    padding: 0.28571em 0; }
+    .b-text > ul li:before {
+      content: "— "; }
 
 @media (max-width: 768px) {
   .b-text__slider .slides li > img {
@@ -4091,6 +4112,10 @@ img {
       background-color: #fff;
       border: 10px solid #fff;
       top: -145px; } }
+
+@media (max-width: 768px) {
+  .b-text__slider-list {
+    margin-bottom: 2em; } }
 
 @media (max-width: 600px) {
   .b-text__slider .text .logo {
@@ -4130,6 +4155,34 @@ img {
     cursor: pointer; }
     .b-partners .flex-control-nav a.flex-active {
       background-color: #e3000b; }
+
+.b-form__text {
+  display: block;
+  width: 100%;
+  max-width: 23.52941em;
+  box-sizing: border-box;
+  border: 0;
+  border-bottom: 1px solid #dedede;
+  background-color: #fff;
+  font-size: 1.7em;
+  color: #666;
+  padding: 0.64706em 0.94118em;
+  -webkit-transition: box-shadow 0.6s ease;
+          transition: box-shadow 0.6s ease;
+  margin: 0; }
+  .b-form__text::-webkit-input-placeholder {
+    color: #666; }
+  .b-form__text::-moz-placeholder {
+    color: #666; }
+  .b-form__text:-ms-input-placeholder {
+    color: #666; }
+  .b-form__text:focus {
+    border-color: #000; }
+.b-form__el {
+  padding-bottom: 2.5em; }
+.b-form__note {
+  font-size: 1.1em;
+  color: #000; }
 
 /*custom styles*/
 .b-article ul:not(.flex-direction-nav, .slides) {

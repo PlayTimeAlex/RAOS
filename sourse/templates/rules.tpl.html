@@ -1,0 +1,63 @@
+@@include('blocks/_b-header.html', {
+"body_classmod": ""
+})
+<!-- Здесь текст в списке такого формата "Рейтинг 2016"-->
+@@include('blocks/_page-title_books.html', {
+"title": "Условия участия в НР2К"
+})
+<div class="b-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 visible-phone">
+                @@include('blocks/_sidebar-menu.html')
+            </div>
+            <div class="col-sm-9">
+                <div class="b-text">
+                    <h2>Как стать участников НР2К</h2>
+                    <p>Компании, претендующие на участие в рейтинге, проходят строгий отбор по следующим критериям:</p>
+                    <ul>
+                        <li>Коммуникационная компания в прочтении НР2К – это компания, предоставляющая услуги, включенные в классификатор и перечень видов PR-услуг АКОС.</li>
+                        <li>В случае предоставления услуг и для других рынков, например, рекламного, объем выручки компании от услуг, представленных в классификаторе, должен быть не менее 75% общей выручки компании.</li>
+                        <li>Компания существует на рынке не менее 3-х лет.</li>
+                        <li>Предоставление данных по группам компаний: либо совокупные данные по группе, либо участие отдельных компаний. Критерий принадлежности компании к группе – наличие у головной компании (или физических лиц, которым принадлежит головная компания) 50% и более акций дочерней.</li>
+                        <li>Самостоятельное участие в рейтинге компаниям, принадлежащим к группам, вместе с группами, возможно только в случае, если компания работает под собственным брендом.</li>
+                    </ul>
+                    <h2>Форма заявки на участие в НР2К:</h2>
+                    <div class="b-form">
+                        <div class="b-form__el">
+                            <input class="b-form__text" type="text" placeholder="Название компании*"/>
+                        </div>
+                        <div class="b-form__el">
+                            <input class="b-form__text" type="text" placeholder="Сайт компании*"/>
+                        </div>
+                        <div class="b-form__el">
+                            <input class="b-form__text" type="text" placeholder="Год основания компании"/>
+                        </div>
+                        <div class="b-form__el">
+                            <input class="b-form__text" type="text" placeholder="Контактное лицо*"/>
+                        </div>
+                        <div class="b-form__el">
+                            <input class="b-form__text" type="text" placeholder="Должность"/>
+                        </div>
+                        <div class="b-form__el">
+                            <input class="b-form__text" type="tel" placeholder="Телефон"/>
+                        </div>
+                        <div class="b-form__el">
+                            <input class="b-form__text" type="email" placeholder="E-mail*"/>
+                        </div>
+                        <div class="b-form__el">
+                            <button class="pr-button" type="submit">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ</button>
+                        </div>
+                        <div class="b-form__el">
+                            <span class="b-form__note">* - поля, обязательные для заполнения</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 hide-phone">
+                @@include('blocks/_sidebar-menu.html')
+            </div>
+        </div>
+    </div>
+</div>
+@@include('blocks/_b-footer.html')

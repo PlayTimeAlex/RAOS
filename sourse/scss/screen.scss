@@ -68,6 +68,9 @@ img{
 .hide-phone{
     display: block;
 }
+.visible-phone{
+    display: none;
+}
 @media (max-width: 992px) {
     .hide-desktop{
          display: block;
@@ -79,6 +82,9 @@ img{
 @media (max-width: 768px) {
     .hide-phone{
         display: none;
+    }
+    .visible-phone{
+        display: block;
     }
 }
 .page_librari{
@@ -134,7 +140,7 @@ img{
 @import "modules/b-text";
 @import "modules/b-feature";
 @import "modules/b-partners";
-
+@import "modules/b-form";
 
 /*custom styles*/
 .b-article ul:not(.flex-direction-nav, .slides) {
