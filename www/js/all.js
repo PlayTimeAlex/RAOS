@@ -3993,8 +3993,7 @@ var $jsWidth, $newsContainer, $wrap, $bMobilenav, $jsAcademicContainer, scrollba
         });
 
         $('.b-text__slider').flexslider({
-            controlNav: false,
-            directionNav: false
+            controlNav: false
         });
 
         var wow = new WOW();

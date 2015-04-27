@@ -66,6 +66,33 @@
                 }
             }
         }
+        .flex-direction-nav{
+            position: absolute;
+            width: 100%;
+            left: em(10);
+            top: em(10);
+            z-index: 10;
+            list-style: none;
+            .flex-prev, .flex-next{
+                display: block;
+                float: left;
+                cursor: pointer;
+                width: 0;
+                height: 0;
+                padding: 27px 27px 0 0;
+                background: url(../images/b64/left.png) no-repeat 50% 50% rgba(255, 255, 255, .6);
+                background-size: 6px 12px;
+                cursor: pointer;
+                border:0;
+                overflow: hidden;
+                &:hover, &:active{
+                    background-color: rgba(255, 255, 255, 1);
+                }
+            }
+            .flex-next{
+                background-image: url(../images/b64/right.png);
+            }
+        }
         .text{
             background-color: #044ea5;
             position: absolute;

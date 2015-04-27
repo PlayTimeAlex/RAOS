@@ -4022,6 +4022,29 @@ img {
         height: 100%;
         background: url(../images/b64/overlay.png);
         z-index: 20; }
+  .b-text__slider .flex-direction-nav {
+    position: absolute;
+    width: 100%;
+    left: 1em;
+    top: 1em;
+    z-index: 10;
+    list-style: none; }
+    .b-text__slider .flex-direction-nav .flex-prev, .b-text__slider .flex-direction-nav .flex-next {
+      display: block;
+      float: left;
+      cursor: pointer;
+      width: 0;
+      height: 0;
+      padding: 27px 27px 0 0;
+      background: url(../images/b64/left.png) no-repeat 50% 50% rgba(255, 255, 255, 0.6);
+      background-size: 6px 12px;
+      cursor: pointer;
+      border: 0;
+      overflow: hidden; }
+      .b-text__slider .flex-direction-nav .flex-prev:hover, .b-text__slider .flex-direction-nav .flex-prev:active, .b-text__slider .flex-direction-nav .flex-next:hover, .b-text__slider .flex-direction-nav .flex-next:active {
+        background-color: white; }
+    .b-text__slider .flex-direction-nav .flex-next {
+      background-image: url(../images/b64/right.png); }
   .b-text__slider .text {
     background-color: #044ea5;
     position: absolute;
