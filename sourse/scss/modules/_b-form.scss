@@ -34,4 +34,49 @@
         font-size: em($font-size);
         color: #000;
     }
+
+    &__checkbox{
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        padding: em(10);
+        .checkbox{
+            width: 1px;
+            height: 1px;
+            position: absolute;
+            left: -100px;
+            top: 0;
+            display: block;
+        }
+        .label{
+            $font-size: 19;
+            font-size: em($font-size);
+            font-weight: 700;
+            color: #ff0000;
+            display: block;
+            position: relative;
+            padding-left: 34px;
+            line-height: 1.8;
+            user-select: none;
+            &:before{
+                content:'';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 37px;
+                height: 34px;
+                margin-top: -20px;
+                background: url(../images/b64/checkbox.png) no-repeat 50% 50%;
+
+            }
+        }
+        .checkbox:checked + .label:before{
+            background-image: url(../images/b64/checkbox-checked.png);
+        }
+    }
+    .align-center &__checkbox{
+        padding-left: em(20);
+        padding-right: em(20);
+    }
 }
